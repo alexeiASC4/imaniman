@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Submit Your Game!</title>
       
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 <script>
@@ -35,18 +35,91 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="../../endgame2.html" style="color:red">AI Games</a>
+            </div>
+
+
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-danger">Search</button>
+                        </form>
+
+                        <li><a href="#" style="color:red">About Us</a></li>
+
+                        <li><a href="../../competition.html" style="color:red">Indie Game 500</a></li>
+                        <li><a href="../fireMessages/index.html" style="color:red">Global Chatroom</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:red">Settings <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" style="color:red">Your Profile</a></li>
+
+                                <li><a href="#" style="color:red">Sound</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" style="color:red">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div class="heading">
         
         </div>
+    <div class="instructions">
+        <h2>Submitting Your Game</h2>
+        <hr>
+        <h3>Step 1</h3>
+        <h5>Make sure you pushed your game to github. Then login to your GitHub account and navigate to your game's index.html file.</h5>
+        <img src="../../assets/firststep.png"  style="width:600px;height:350px;display:inline-block;"alt="">
+        <hr>
+        <h3>Step 2</h3>
+        <h5>Copy the url of that page</h5>
+        <img src="../../assets/secondstep.png" style="width:600px;height:350px;display:inline-block;" alt="">
+        <hr>
+        <h3>Step 3</h3>
+        <h5>Visit rawgit.com and paste the url in the indicated section.</h5>
+        <img src="../../assets/thirdstep.png" style="width:600px;height:350px;display:inline-block;" alt="">
+        <hr>
+        <h3>Step 4</h3>
+        <h5>Press the indicated button to copy a url that is publicly accessible.</h5>
+        <img src="../../assets/fourthstep.png" style="width:600px;height:350px;display:inline-block;" alt="">
+        <hr>
+        <h3>Step 5</h3>
+        <h5>Paste your new, publicly accessible url in the "Game's Url" field below, fill out the required fields and hit the submit button!</h5>
+        <hr>
+        
+    </div>
     <div class="burger">
-    <p>Whats your name?</p><input id="name">
-    <p> Whats your game's name?</p><input id="gamename">
-    <p>Whats your game link?</p><input id="gamelink">
+    <p>Name</p><input id="name">
+    <p>Game's Name</p><input id="gamename">
+    <p>Game's Url</p><input id="gamelink">
     <div class="GObutton">
                 <input type="reset" onclick="updateDB();" value="Submit/Update">
             </div>
     <div class="update">
-                <input type="reset" id="updateid" value="Submit">
+                
     </div>
     <div class="jumbotron" id="gamechart">
         <h1></h1>
@@ -56,6 +129,16 @@
 
             </div>
     </div>
+        <footer class="portfolio-footer">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <p>
+                    © 2017 Games are mostly fictional.
+                </p>
+            </div>
+        </footer>
     </div>
     
 </body>

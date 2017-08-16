@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>AI Global Chatroom</title>
+
+    <!--Go to https://console.firebase.google.com-->
+    <!--Sign in and add a project "fireMessage"-->
+    <!--PASTE SNIPPET HERE-->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDMPDcbUZRXiuHn3i8jPb-RkHmM7GWud-o",
+            authDomain: "imanischat.firebaseapp.com",
+            databaseURL: "https://imanischat.firebaseio.com",
+            projectId: "imanischat",
+            storageBucket: "",
+            messagingSenderId: "970365009581"
+        };
+        firebase.initializeApp(config);
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- jquery
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Alike+Angular|Asul|Eczar" rel="stylesheet">
+
+    <!--custom files-->
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                 <a class="navbar-brand" href="../../endgame2.html" style="color:red">AI Games</a> 
+            </div>
+
+
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-danger">Search</button>
+                        </form>
+
+                        <li><a href="#" style="color:red">About Us</a></li>
+
+                        <li><a href="../../competition.html" style="color:red">Indie Game 500</a></li>
+                        <li><a href="index.html" style="color:red">Global Chatroom</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:red">Settings <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" style="color:red">Your Profile</a></li>
+
+                                <li><a href="#" style="color:red">Sound</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" style="color:red">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- <a href="../../endgame2.html"><button type="button" class="btn btn-lg">Back to main site</button></a> -->
+    <!--Add your name-->
+    <div class="heading">
+    <h1>AI Global Chatroom</h1>
+    </div>
+
+    <!--Will be populated with messages-->
+    <div class="allMessages">
+
+    </div>
+
+    <!--For user to input messages-->
+    <div class="userContainer">
+        <form>
+            <div class="textContainer">
+                <div>
+                    <p>Your name:</p><input id="name" type="text">
+                </div>
+                <div>
+                    <p>Message:</p><input id="message" type="text">
+                </div>
+            </div>
+            <div class="GObutton">
+                <input type="reset" onclick="updateDB();" value="Submit/Update">
+            </div>
+        </form>
+        <footer class="portfolio-footer">
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <p>
+                    © 2017 All messages and users are fictional.
+
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
